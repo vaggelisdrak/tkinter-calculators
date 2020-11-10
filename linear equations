@@ -1,0 +1,174 @@
+from tkinter import *
+import numpy as np
+
+win = Tk()
+win.title('υπολογισμος γραμμικων συστηματων')
+
+win.configure(background = 'black')
+win.geometry('364x320')
+var = StringVar()
+
+#e.insert(0, 'write')
+
+frame1 = LabelFrame(win,padx=5,pady=5,bg='grey',borderwidth=6)
+frame1.grid(row=1,column=0)
+
+frame2 = LabelFrame(win,padx=5,pady=5,bg='grey')
+frame2.grid(row=0,column=0)
+
+frame3 = LabelFrame(win,padx=5,pady=5,bg='grey')
+frame3.grid(row=2,column=0)
+
+epelexe = Label(frame2, text='Επίλυση γραμμικού συστηματος ',fg ='white',bg ='black',font='none 13 bold')
+epelexe.grid(row=0,column=0,padx=5)
+
+grapse = Label(frame2, text='Γράψε τους συντελεστες καθε εξισωσης',fg ='white',bg ='black')
+grapse.grid(row=1,column=0,pady=10)
+
+def tria():
+    
+    a = StringVar()
+    b= StringVar()
+    c= StringVar()
+    d = StringVar()
+    e = StringVar()
+    f= StringVar()
+    g= StringVar()
+    h = StringVar()
+    i = StringVar()
+    j = StringVar()
+    k= StringVar()
+    l= StringVar()
+    result = StringVar()
+
+    e1 = Entry(frame1,textvariable=a ,width = 3, borderwidth = 5)
+    e1.grid(row=0,column=0,padx=10)
+
+    e2 = Label(frame1, text='* x',fg ='white',bg ='black',font='none 10 bold')
+    e2.grid(row=0,column=1,pady=15)
+
+    e3 = Label(frame1, text=' +',fg ='white',bg ='grey',font='none 12 bold')
+    e3.grid(row=0,column=2,pady=5)
+
+    e4 = Entry(frame1,textvariable=b ,width = 3, borderwidth = 5)
+    e4.grid(row=0,column=3,padx=10)
+
+    e5 = Label(frame1, text='* y',fg ='white',bg ='black',font='none 10 bold')
+    e5.grid(row=0,column=4,pady=10)
+
+    e6 = Label(frame1, text=' +',fg ='white',bg ='grey',font='none 12 bold')
+    e6.grid(row=0,column=5,pady=10)
+
+    e7 = Entry(frame1,textvariable=c ,width = 3, borderwidth = 5)
+    e7.grid(row=0,column=6,padx=10)
+
+    e8 = Label(frame1, text='* z',fg ='white',bg ='black',font='none 10 bold')
+    e8.grid(row=0,column=7,pady=10)
+
+    e9 = Label(frame1, text=' =',fg ='white',bg ='grey',font='none 12 bold')
+    e9.grid(row=0,column=8,pady=10)
+
+    e10 = Entry(frame1,textvariable=d ,width = 3, borderwidth = 5)
+    e10.grid(row=0,column=9,padx=10)
+
+    #-------------------------------------------------------------------
+
+    e11 = Entry(frame1,textvariable=e ,width = 3, borderwidth = 5)
+    e11.grid(row=1,column=0, padx=10)
+
+    e12 = Label(frame1, text='* x',fg ='white',bg ='black',font='none 10 bold')
+    e12.grid(row=1,column=1,pady=10)
+
+    e13 = Label(frame1, text='+',fg ='white',bg ='grey',font='none 12 bold')
+    e13.grid(row=1,column=2,pady=10)
+
+    e14 = Entry(frame1,textvariable=f ,width = 3, borderwidth = 5)
+    e14.grid(row=1,column=3, padx=10)
+
+    e15 = Label(frame1, text='* y',fg ='white',bg ='black',font='none 10 bold')
+    e15.grid(row=1,column=4,pady=10)
+
+    e16 = Label(frame1, text='+',fg ='white',bg ='grey',font='none 12 bold')
+    e16.grid(row=1,column=5,pady=10)
+
+    e17 = Entry(frame1,textvariable=g ,width = 3, borderwidth = 5)
+    e17.grid(row=1,column=6,padx=10)
+
+    e18 = Label(frame1, text='* z',fg ='white',bg ='black',font='none 10 bold')
+    e18.grid(row=1,column=7,pady=10)
+
+    e19 = Label(frame1, text='=',fg ='white',bg ='grey',font='none 12 bold')
+    e19.grid(row=1,column=8,pady=10)
+
+    e20 = Entry(frame1,textvariable=h ,width = 3, borderwidth = 5)
+    e20.grid(row=1,column=9,padx=10)
+
+    #--------------------------------------------------------------------
+
+    e21 = Entry(frame1,textvariable=i ,width = 3, borderwidth = 5)
+    e21.grid(row=2,column=0,padx=10)
+
+    e22 = Label(frame1, text='* x',fg ='white',bg ='black',font='none 10 bold')
+    e22.grid(row=2,column=1,pady=10)
+
+    e23 = Label(frame1, text='+',fg ='white',bg ='grey',font='none 12 bold')
+    e23.grid(row=2,column=2,pady=10)
+
+    e24 = Entry(frame1,textvariable=j ,width = 3, borderwidth = 5)
+    e24.grid(row=2,column=3,padx=10)
+
+    e25 = Label(frame1, text='* y',fg ='white',bg ='black',font='none 10 bold')
+    e25.grid(row=2,column=4,pady=10)
+
+    e26 = Label(frame1, text='+',fg ='white',bg ='grey',font='none 12 bold')
+    e26.grid(row=2,column=5,pady=10)
+
+    e27 = Entry(frame1,textvariable=k ,width = 3, borderwidth = 5)
+    e27.grid(row=2,column=6,padx=10)
+
+    e28 = Label(frame1, text='* z',fg ='white',bg ='black',font='none 10 bold')
+    e28.grid(row=2,column=7,pady=10)
+
+    e29 = Label(frame1, text='=',fg ='white',bg ='grey',font='none 12 bold')
+    e29.grid(row=2,column=8,pady=10)
+
+    e30 = Entry(frame1,textvariable=l ,width = 3, borderwidth = 5)
+    e30.grid(row=2,column=9,padx=10)
+
+    
+    def calc():
+        try:
+            a1 = float(a.get())
+            b1 = float(b.get())
+            c1 = float(c.get())
+            d1 = float(d.get())
+            ee = float(e.get())
+            f1 = float(f.get())
+            g1 = float(g.get())
+            h1 = float(h.get())
+            i1 = float(i.get())
+            j1 = float(j.get())
+            k1 = float(k.get())
+            l1 = float(l.get())
+            A = np.array([[a1, b1, c1], [ee, f1, g1], [i1, j1, k1]])#3*3 pinakas
+            B = np.array([d1, h1, l1])
+            r = np.linalg.solve(A,B)
+            roundr =[]
+            for num in r:
+                num=round(num,3)
+                roundr.append(num)
+            result.set(roundr)
+        except:
+            result.set('error')
+
+        lab = Label(frame3,textvariable=result,fg='black',bg='gold',font='none 12 bold')
+        lab.grid(row=0,column=1,padx=20)
+
+
+    epilogh1= Button(frame3, text='(x, y, z) = ', command=calc,font='none 10 bold', fg='black', bg='orange', padx = 21, pady = 7)
+    epilogh1.grid(row=0,column=0,padx=10)
+
+epilogh1= Button(frame2, text='3*3', command=tria, fg='black', bg='orange', padx = 10, pady = 5,font='none 15 bold')
+epilogh1.grid(row=0,column=1,padx=1)
+
+win.mainloop()
