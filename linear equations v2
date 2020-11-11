@@ -371,7 +371,7 @@ def tessera():
     e23 = Entry(frame1,textvariable=i ,width = 3, borderwidth = 5)
     e23.grid(row=1,column=9,padx=10)
 
-    e24 = Label(frame1, text='* w',fg ='white',bg ='black',font='none 12 bold')
+    e24 = Label(frame1, text='* w',fg ='white',bg ='black',font='none 10 bold')
     e24.grid(row=1,column=10,pady=10)
 
     e25 = Label(frame1, text=' =',fg ='white',bg ='grey',font='none 12 bold')
@@ -412,7 +412,7 @@ def tessera():
     e36 = Entry(frame1,textvariable=n ,width = 3, borderwidth = 5)
     e36.grid(row=2,column=9,padx=10)
 
-    e37 = Label(frame1, text='* w',fg ='white',bg ='black',font='none 12 bold')
+    e37 = Label(frame1, text='* w',fg ='white',bg ='black',font='none 10 bold')
     e37.grid(row=2,column=10,pady=10)
 
     e38 = Label(frame1, text=' =',fg ='white',bg ='grey',font='none 12 bold')
@@ -453,7 +453,7 @@ def tessera():
     e49 = Entry(frame1,textvariable=s ,width = 3, borderwidth = 5)
     e49.grid(row=3,column=9,padx=10)
 
-    e50 = Label(frame1, text='* w',fg ='white',bg ='black',font='none 12 bold')
+    e50 = Label(frame1, text='* w',fg ='white',bg ='black',font='none 10 bold')
     e50.grid(row=3,column=10,pady=10)
 
     e51 = Label(frame1, text=' =',fg ='white',bg ='grey',font='none 12 bold')
@@ -627,7 +627,7 @@ def pente():
     e26 = Entry(frame1,textvariable=j ,width = 3, borderwidth = 5)
     e26.grid(row=1,column=9,padx=10)
 
-    e27 = Label(frame1, text='* w',fg ='white',bg ='black',font='none 12 bold')
+    e27 = Label(frame1, text='* w',fg ='white',bg ='black',font='none 10 bold')
     e27.grid(row=1,column=10,pady=10)
 
     e28 = Label(frame1, text=' +',fg ='white',bg ='grey',font='none 12 bold')
@@ -636,7 +636,7 @@ def pente():
     e29 = Entry(frame1,textvariable=k ,width = 3, borderwidth = 5)
     e29.grid(row=1,column=12,padx=10)
 
-    e30 = Label(frame1, text='* k',fg ='white',bg ='black',font='none 12 bold')
+    e30 = Label(frame1, text='* k',fg ='white',bg ='black',font='none 10 bold')
     e30.grid(row=1,column=13,pady=10)
 
     e31 = Label(frame1, text=' =',fg ='white',bg ='grey',font='none 12 bold')
@@ -677,7 +677,7 @@ def pente():
     e42 = Entry(frame1,textvariable=p ,width = 3, borderwidth = 5)
     e42.grid(row=2,column=9,padx=10)
 
-    e43 = Label(frame1, text='* w',fg ='white',bg ='black',font='none 12 bold')
+    e43 = Label(frame1, text='* w',fg ='white',bg ='black',font='none 10 bold')
     e43.grid(row=2,column=10,pady=10)
 
     e44 = Label(frame1, text=' +',fg ='white',bg ='grey',font='none 12 bold')
@@ -686,7 +686,7 @@ def pente():
     e45 = Entry(frame1,textvariable=q ,width = 3, borderwidth = 5)
     e45.grid(row=2,column=12,padx=10)
 
-    e46 = Label(frame1, text='* k',fg ='white',bg ='black',font='none 12 bold')
+    e46 = Label(frame1, text='* k',fg ='white',bg ='black',font='none 10 bold')
     e46.grid(row=2,column=13,pady=10)
 
     e47 = Label(frame1, text=' =',fg ='white',bg ='grey',font='none 12 bold')
@@ -727,7 +727,7 @@ def pente():
     e58 = Entry(frame1,textvariable=v ,width = 3, borderwidth = 5)
     e58.grid(row=3,column=9,padx=10)
 
-    e59 = Label(frame1, text='* w',fg ='white',bg ='black',font='none 12 bold')
+    e59 = Label(frame1, text='* w',fg ='white',bg ='black',font='none 10 bold')
     e59.grid(row=3,column=10,pady=10)
 
     e60 = Label(frame1, text=' +',fg ='white',bg ='grey',font='none 12 bold')
@@ -736,7 +736,7 @@ def pente():
     e61 = Entry(frame1,textvariable=w ,width = 3, borderwidth = 5)
     e61.grid(row=3,column=12,padx=10)
 
-    e62 = Label(frame1, text='* k',fg ='white',bg ='black',font='none 12 bold')
+    e62 = Label(frame1, text='* k',fg ='white',bg ='black',font='none 10 bold')
     e62.grid(row=3,column=13,pady=10)
 
     e63 = Label(frame1, text=' =',fg ='white',bg ='grey',font='none 12 bold')
@@ -777,7 +777,7 @@ def pente():
     e74 = Entry(frame1,textvariable=bb ,width = 3, borderwidth = 5)
     e74.grid(row=4,column=9,padx=10)
 
-    e75 = Label(frame1, text='* w',fg ='white',bg ='black',font='none 12 bold')
+    e75 = Label(frame1, text='* w',fg ='white',bg ='black',font='none 10 bold')
     e75.grid(row=4,column=10,pady=10)
 
     e76 = Label(frame1, text=' +',fg ='white',bg ='grey',font='none 12 bold')
@@ -786,7 +786,7 @@ def pente():
     e77 = Entry(frame1,textvariable=cc ,width = 3, borderwidth = 5)
     e77.grid(row=4,column=12,padx=10)
 
-    e78 = Label(frame1, text='* k',fg ='white',bg ='black',font='none 12 bold')
+    e78 = Label(frame1, text='* k',fg ='white',bg ='black',font='none 10 bold')
     e78.grid(row=4,column=13,pady=10)
 
     e79 = Label(frame1, text=' =',fg ='white',bg ='grey',font='none 12 bold')
