@@ -1,0 +1,126 @@
+from tkinter import *
+
+win = Tk()
+win.title('Υπολογισμός μορίων')
+win.configure(background = 'black')
+win.geometry('340x330')
+var = StringVar()
+
+frame1 = LabelFrame(win,padx=5,pady=5,bg='grey',borderwidth=6)
+frame1.grid(row=1,column=0)
+
+frame2 = LabelFrame(win,padx=5,pady=5,bg='grey')
+frame2.grid(row=0,column=0)
+
+frame3 = LabelFrame(win,padx=5,pady=5,bg='grey')
+frame3.grid(row=2,column=0)
+
+epelexe = Label(frame2, text='Επέλεξε σύστημα ',fg ='white',bg ='black',font='none 13 bold')
+epelexe.grid(row=0,column=0)
+
+grapse = Label(frame2, text='Γράψε τους βαθμούς σου από 0-20',fg ='white',bg ='black')
+grapse.grid(row=1,column=0,pady=10)
+
+def neo():
+    vmath = StringVar()
+    vfys = StringVar()
+    vxhm = StringVar()
+    vgl = StringVar()
+    result = StringVar()
+
+    math = Label(frame1, text='Μαθηματικά',fg ='white',bg ='black')
+    math.grid(row=0,column=0,pady=10)
+    e1 = Entry(frame1,textvariable=vmath, width = 20, borderwidth = 5)
+    e1.grid(row=0,column=1,columnspan=5,padx= 15)
+
+    fys = Label(frame1, text='     Φυσική     ',fg ='white',bg ='black')
+    fys.grid(row=1,column=0,pady=10)
+    e2 = Entry(frame1,textvariable=vfys ,width = 20, borderwidth = 5)
+    e2.grid(row=1,column=1,columnspan=5, padx=15)
+
+    xhm = Label(frame1, text='      Χημεία     ',fg ='white',bg ='black')
+    xhm.grid(row=2,column=0,pady=10)
+    e3 = Entry(frame1,textvariable=vxhm ,width = 20, borderwidth = 5)
+    e3.grid(row=2,column=1,columnspan=5, padx=15)
+
+    gl = Label(frame1, text='    Γλώσσα    ',fg ='white',bg ='black')
+    gl.grid(row=3,column=0,pady=10)
+    e4 = Entry(frame1,textvariable=vgl, width = 20, borderwidth = 5)
+    e4.grid(row=3,column=1,columnspan=5, padx=15)
+
+
+    def calc():
+        m = float(vmath.get())
+        f = float(vfys.get())
+        x = float(vxhm.get())
+        gl = float(vgl.get())
+        r = int((m+f+x+gl)*250)
+        
+        if 0<=m<=20 and 0<=f<=20 and 0<=x<=20 and 0<=gl<=20:
+            result.set(r)
+        else:
+            result.set('error')
+
+        lab = Label(frame3,textvariable=result,fg='black',bg='gold',font='none 14 bold')
+        lab.grid(row=0,column=1,padx=20)
+
+
+    epilogh1= Button(frame3, text='Yπολογισμός μορίων(ΝΕΟ)', command=calc,font='none 10 bold', fg='black', bg='orange', padx = 21, pady = 7)
+    epilogh1.grid(row=0,column=0,padx=10)
+
+
+def palio():
+    vmath = StringVar()
+    vfys = StringVar()
+    vxhm = StringVar()
+    vgl = StringVar()
+    result = StringVar()
+
+    math = Label(frame1, text='Μαθηματικά',fg ='white',bg ='black')
+    math.grid(row=0,column=0,pady=10)
+    e1 = Entry(frame1,textvariable=vmath, width = 20, borderwidth = 5)
+    e1.grid(row=0,column=1,columnspan=5,padx= 15)
+
+    fys = Label(frame1, text='     Φυσική     ',fg ='white',bg ='black')
+    fys.grid(row=1,column=0,pady=10)
+    e2 = Entry(frame1,textvariable=vfys ,width = 20, borderwidth = 5)
+    e2.grid(row=1,column=1,columnspan=5, padx=15)
+
+    xhm = Label(frame1, text='      Χημεία     ',fg ='white',bg ='black')
+    xhm.grid(row=2,column=0,pady=10)
+    e3 = Entry(frame1,textvariable=vxhm ,width = 20, borderwidth = 5)
+    e3.grid(row=2,column=1,columnspan=5, padx=15)
+
+    gl = Label(frame1, text='    Γλώσσα    ',fg ='white',bg ='black')
+    gl.grid(row=3,column=0,pady=10)
+    e4 = Entry(frame1,textvariable=vgl, width = 20, borderwidth = 5)
+    e4.grid(row=3,column=1,columnspan=5, padx=15)
+
+
+    def calc():
+        m = float(vmath.get())
+        f = float(vfys.get())
+        x = float(vxhm.get())
+        gl = float(vgl.get())
+        r = int(m*330+f*270+x*200+gl*200)
+        error = False
+        if 0<=m<=20 and 0<=f<=20 and 0<=x<=20 and 0<=gl<=20:
+            result.set(r)
+        else:
+            result.set('error')
+
+        lab = Label(frame3,textvariable=result,fg='black',bg='gold',font='none 14 bold')
+        lab.grid(row=0,column=1,padx=20)
+
+
+    epilogh1= Button(frame3, text='Yπολογισμός μορίων(ΠΑΛΙΟ)', command=calc,font='none 10 bold', fg='black', bg='orange', padx = 16, pady = 7)
+    epilogh1.grid(row=0,column=0,padx=10)
+
+epilogh1= Button(frame2, text='NEO', command=neo, fg='black', bg='orange', padx = 16, pady = 5)
+epilogh1.grid(row=0,column=1,padx=1)
+
+epilogh2 = Button(frame2, text='ΠΑΛΙΟ', command=palio, fg='black', bg='orange', padx = 10, pady = 5)
+epilogh2.grid(row=0,column=2)
+
+
+win.mainloop()
