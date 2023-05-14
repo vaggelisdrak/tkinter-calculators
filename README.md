@@ -1,1 +1,1 @@
-# tkinter
+# tkinter applications for linear algebra
